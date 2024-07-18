@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "MyProject.Kestrel": {
+    "MyProject.Kestrel0": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
@@ -18,7 +18,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "https": {
+    "MyProject.Kestrel": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
