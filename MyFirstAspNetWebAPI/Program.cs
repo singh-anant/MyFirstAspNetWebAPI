@@ -18,7 +18,7 @@ var app = builder.Build();
 
 
 
-app.Run(async (HttpContext context) =>
+/*app.Run(async (HttpContext context) =>
 {
     if (1 == 1)
     {
@@ -78,9 +78,29 @@ app.Run(async (HttpContext context) =>
     //we are using stream reader because context.Request.Body is of type stream
     string body = await reader.ReadToEndAsync();
 
+    await context.Response.WriteAsync(body);
 
 
 
 
+});*/
+
+
+//middilerwares-using middlewares we are just 
+
+//the problem with Run() method is that it does not forward request to the next middleware
+app.Run(async (HttpContext context) =>
+{
+    await context.Response.WriteAsync("Hello");
 });
+
+app.Run(async (HttpContext context) =>
+{
+    await context.Response.WriteAsync("Hello Again");
+});
+
+
+
+
+
 app.Run();
